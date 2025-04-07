@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    a, a:hover{
+        text-decoration: none;
+    }
+    li{
+        list-style-type: none;
+    }
+    audio, img, iframe, video{
+        display: inline-block;  /*reset para as mihas midias, para tirar as margins, corrige erros*/
+        height: auto;
+        width: 100%;
+    }
+}
+/*grid*/
+.container{
+    margin: 0 auto;
+    width: 100%;
+    @media(min-width: 768px)  {
+       width: 96%; 
+    }
+}
+.row{
+    display: flex; /*exibir a orientaçao um do lado do outro por padrão*/
+}
+.col-12, .col-10, .col-6, .col-4{
+    padding: 15px;
+}
+.col-12 {
+    width: 100%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-9{
+    width: 75%;
+}
+.col-8{
+    width: 66.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-4{
+    width: 33.33%;
+}
+/*top*/
+.top{
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    .top_container{  /*se usa para relacionar nomenclatutras de clases do primeiro pai entre o filho direito*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 10px 20px;
+        .logo{
+            width: 20%;
+            a{
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                font-size: 18px;
+                font-weight: 700;
+                span{
+                    font-size: 16px;
+                }
+            }
+        }
+        .menu{
+            .container_links{
+                display: flex;
+                gap: 20px;
+
+                li{
+                    a{
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Section*/ 
+.theme{
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    .banner{
+        background-image: url("../imgs/banner.png");
+        background-size: cover; /*preenche o tamanho total da section*/
+        background-repeat: no-repeat;
+        color: #fff;
+        .container{
+            padding: 17em 0 10em 0; 
+            a.bt-banner{ /*refenciar a classe do seletor)*/
+                background-color: #fff;
+                border-radius: 8px;
+                color:#7D391F;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 15px;
+                padding: 10px 20px;
+
+            }
+            h1{
+                font-size: 6em;
+            }
+            h2{
+                font-size: 4em;
+            }
+        }
+    }
+    .about-us, .products{
+        .container{
+            padding: 78px 0;
+        }
+    }
+    .about-us {
+        .container{
+            h2{
+                font-size: 4em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+        }
+    }
+    .products{
+        background-image: url(../imgs/banner-product.png);
+        background-size: cover;
+        background-repeat: none;
+        background-position-x: -300px;
+        .container-product{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 40%;
+            }
+            p{
+                font-size: 30px;
+            }
+        }
+    }
+
+}
