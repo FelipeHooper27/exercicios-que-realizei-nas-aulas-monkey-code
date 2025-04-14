@@ -119,12 +119,12 @@
             }
         }
     }
-    .about-us, .products{
+    .about-us, .products, .testimonials{
         .container{
             padding: 78px 0;
         }
     }
-    .about-us {
+    .about-us, .testimonials {
         .container{
             h2{
                 font-size: 4em;
@@ -148,6 +148,34 @@
             }
             p{
                 font-size: 30px;
+            }
+        }
+    }
+    .testimonials{
+        .container-testimonial{
+            background-color: #fff;
+            border: 1px solid #EEE;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+            margin-top: 80px;
+            padding: 10px 20px;
+            position: relative;
+            img{
+                height: 100px;
+                position: absolute;
+                top: -60px;
+                width: 100px;
+            }
+            p{
+                font-size: 1.2em;
+                margin-top: 40px;
+            }
+            h3{
+                font-size: 1.6em;
             }
         }
     }
